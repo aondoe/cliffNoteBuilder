@@ -13,7 +13,7 @@ def cliffNoteBuilder(queryName, srcDoc):  #declare function
         myString="";   #initialize string for later use to extract data from the text/word document.
         for x in text:  #pluck every element out of the textract object/Unit 5 Notes Copy.docx file.
             x=chr(x);   #Convert the ASCII characters into text
-            myString+=x;    #Place every letter and word inside the myString variable
+            myString+=x;    #Place every letter and word from the document inside the myString variable
 
         storeDoc=open(srcDoc+".txt","w", encoding="utf-8");    #Open a file object and put it in write mode
 
