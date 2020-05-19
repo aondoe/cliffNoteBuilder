@@ -3,11 +3,12 @@ import docx2txt;    #adds more options to word documents. Installed using pip
 from unicodedata import *;  #ensures many unicode options are available. Built-in module
 import docx;
 from docx import Document;
-
+import tkinter as tk;
 
 #Two parameters: the first parameter is the name of the search query the second is for the file to scan.  
 def cliffNoteBuilder(queryName, srcDoc):  #declare function
     try:
+        window=tk.Tk();
         text = textract.process(srcDoc+'.docx', extension='docx', encoding="latin-1"); #latin-1 is the encoding needed to prevent the UnicodeError
 
         myString="";   #initialize string for later use to extract data from the text/word document.
